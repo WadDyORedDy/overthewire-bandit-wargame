@@ -6,7 +6,7 @@ cd inhere/
 
 To see more information about the specific files, not just content or extension, you can use the file-command
 
-```file ./*```
+file ./*
 
 We see that -file0 is ASCII text
 
