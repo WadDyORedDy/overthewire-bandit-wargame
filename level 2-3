@@ -1,0 +1,5 @@
+ssh bandit2@bandit.labs.overthewire.org -p 2220 
+
+The next file is called "spaces in this filename" and we need to tell the shell to consider the entire filename as a single argument.
+
+cat 'spaces in this filename'
