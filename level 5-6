@@ -1,0 +1,14 @@
+ssh bandit5@bandit.labs.overthewire.org -p 2220
+
+The next passsword is stored in a file in the "inhere" directory. The file has all of the following properties
+- human-readable
+- 1033 bytes in size
+- not executable
+
+To search for a file with specific properties we can use the find-command.
+
+find . -type f -size 1033c ! -executable
+
+From the output we know that the file is ./inhere/maybehere07/.file2 (remember the dot at the beginning of the password-file)
+
+cat /inhere/maybehere07/.file2
