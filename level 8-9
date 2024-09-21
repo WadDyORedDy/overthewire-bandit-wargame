@@ -1,0 +1,14 @@
+In this level, the password is a unique line of text within the data.txt file
+
+To search for the unique line of text we need to remember something specific about the "cat" and "uniq" commands.
+
+Cat outputs the file directly as it's written, and the uniq command requires adjacent duplicate lines to function properly. 
+Uniq only removes, or reports, duplicate lines that are adjacent and does not search the entire file for duplicates - it processes the lines as they come.
+If the file isn't sorted, uniq won't recognize them as duplicates. We need to sort to ensure that duplicate lines are adjecent. 
+
+sort data.txt
+
+This output shows a list of lines of text that is sorted alphabetically and numerically - starting with 0-9 and continuing with a-z.
+This output can further be used with pipe and the uniq command. Remember to use "-u" after uniq to ensure only those lines that occur once will be outputted
+
+sort data.txt | uniq -u
