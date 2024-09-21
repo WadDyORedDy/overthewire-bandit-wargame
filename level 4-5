@@ -1,0 +1,13 @@
+ssh bandit4@bandit.labs.overthewire.org -p 2220
+
+The next file is stored in the only human-readable file within the directory "inhere".
+
+cd inhere/
+
+To see more information about the specific files, not just content or extension, you can use the file-command
+
+file ./*
+
+We see that -file0 is ASCII text
+
+cat ./-file07
