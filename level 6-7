@@ -1,0 +1,16 @@
+ssh bandit6@bandit.labs.overthewire.org -p 2220
+
+The next password-file could be located anywhere on the server and has all of the following properties:
+- owned by user bandit7
+- owned by group bandit6
+- 33 bytes in size
+
+We can use the same find command from earlier with a few corrections:
+
+find . type f -size 33c -user bandit7 -group bandit6
+
+This outputs a lot of "permission denied" files, and from a quick run-through one of the files is not denied: "./var/lib/dpkg/info/bandit7.password",
+however we can make the output alot clearer by outputting it to "2>/dev/null" to remove all errors from the output. 
+
+find . type f -size 33c -user bandit7 -group bandit6 2>/dev/null which returns the correct file.
+Fun fact: 1/dev/null removes all normal output and leaves error-outputs in the output.
