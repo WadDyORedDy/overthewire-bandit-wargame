@@ -1,3 +1,5 @@
+ssh bandit8@bandit.labs.overthewire.org -p 2220
+
 In this level, the password is a unique line of text within the data.txt file
 
 To search for the unique line of text we need to remember something specific about the "cat" and "uniq" commands.
