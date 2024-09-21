@@ -1,0 +1,6 @@
+ssh bandit1@bandit.labs.overthewire.org -p 2220 (if used in CMD)
+
+The next password is saved in a file called "-".
+As "-" is considered a special argument, so you need to use the full path of the file.
+
+"cat ./-"
