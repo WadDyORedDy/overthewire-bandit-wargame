@@ -1,0 +1,9 @@
+ssh bandit3@bandit.labs.overthewire.org -p 2220
+
+The next password is stored in the directory "inhere". 
+
+cd inhere/
+
+The file is hidden as the filename starts with a dot. To see all files, including hidden:
+
+ls -a
