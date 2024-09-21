@@ -1,1 +1,20 @@
+ssh bandit11@bandit.labs.overthewire.org -p 2220
 
+The next password is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions
+
+A B C D E F G H I J  K  L  M  N
+1 2 3 4 5 6 7 8 9 10 11 12 13 14
+
+We can use the "tr" command to translate the input data. 
+The first argument: 'A-Za-z' specifices which characted that should be translated
+The second argument: 'N-ZA-Mn-z-a-m' specifices what the characters should be translated to
+
+The second argument can be, for the sake of explaining, divided into two seections:
+A-Z = N-ZA-M = A become N, B becomes O and so on until you reach M (13th letter) where you need to wrap around so that Z becomes M.
+The same can be said for the lowercase letters.
+
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+
+The output will be: 
+
+The password is PASSWORD
