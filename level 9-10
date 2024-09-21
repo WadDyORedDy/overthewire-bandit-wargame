@@ -1,1 +1,16 @@
+The next password is stored in data.txt in one of the few human-readable strings, preceded by several ‘=’ characters.
 
+The keyword in this assignment is "strings" which also is the command we need to use. By using "strings" we extract printable strings from a binary file.
+
+strings data.txt
+
+This outputs alot of gibberish, but we can grep it with the other part of the assignment "several '=' characters"
+
+strings data.txt | grep "=="
+
+The output is:
+
+}========== the
+3JprD========== passwordi
+~fDV3========== is
+D9========== PASSWORD
